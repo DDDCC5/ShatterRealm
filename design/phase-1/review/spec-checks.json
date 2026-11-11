@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "schema": "1.0",
+  "revision": 4,
+  "builtinObjects": 15,
+  "groups": 3,
+  "uiScreens": 16,
+  "referenceIntegrity": "passed",
+  "allDeclaredAssetsExist": true,
+  "deviceValidation": "not_performed",
+  "scope": "phase-1 only"
+}

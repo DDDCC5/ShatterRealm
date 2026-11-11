@@ -1,0 +1,1258 @@
+{
+  "id": "glass-jar",
+  "fractureStrategy": "volumetric-plane-partition",
+  "sourceComponentRoles": [
+    "body",
+    "body"
+  ],
+  "zh": "玻璃罐",
+  "en": "Glass jar",
+  "material": "glass",
+  "massKg": 0.38,
+  "boundsM": [
+    [
+      -0.052153393626213074,
+      -2.886409317581072e-18,
+      -0.052153393626213074
+    ],
+    [
+      0.052153393626213074,
+      0.17000000178813934,
+      0.052153393626213074
+    ]
+  ],
+  "longestDimensionM": 0.17000000178813934,
+  "materialProvenance": "Manifold original face IDs; cut faces get separate interior material",
+  "intactSurfaceAreaM2": 0.13195217042444954,
+  "intactVolumeM3": 0.00023881990785432102,
+  "fragmentVolumeSumM3": 0.00023881990785432105,
+  "relativeVolumeError": 1.1349579084785327e-16,
+  "fragmentCount": 29,
+  "targetFragmentBudget": 28,
+  "intact": "intact.glb",
+  "fragments": "fragments.glb",
+  "colliders": "collision-hulls.glb",
+  "closedSolids": "fracture-solids.glb",
+  "fragmentRecords": [
+    {
+      "id": "fragment-000",
+      "exteriorAreaM2": 0.001968103552533929,
+      "cutAreaM2": 0.0005539808528026722,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        0.03783932948931489,
+        0.0865606867888188,
+        0.03154242324510168
+      ],
+      "volumeM3": 2.7572707566602944e-06,
+      "massKg": 0.004387251033402299,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          9.952682870457015e-07,
+          2.8544985894650984e-07,
+          2.979539430776808e-07
+        ],
+        [
+          2.8544985894650984e-07,
+          6.340246145578665e-07,
+          -3.678419890324428e-07
+        ],
+        [
+          2.979539430776808e-07,
+          -3.678419890324428e-07,
+          9.196377423563283e-07
+        ]
+      ],
+      "triangles": 308,
+      "colliderTriangles": 202,
+      "colliderHullCount": 4,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.1697997325227174
+    },
+    {
+      "id": "fragment-001",
+      "exteriorAreaM2": 0.002637699870363558,
+      "cutAreaM2": 0.0023169587862475805,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        0.019910012907390095,
+        0.16611352643260408,
+        0.01951798077379434
+      ],
+      "volumeM3": 1.1472783261481635e-05,
+      "massKg": 0.018255000927403384,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          4.282342996457317e-06,
+          2.138435387922791e-07,
+          -3.746807164484969e-07
+        ],
+        [
+          2.138435387922791e-07,
+          5.641802433405887e-06,
+          1.1202274977090499e-07
+        ],
+        [
+          -3.746807164484969e-07,
+          1.1202274977090499e-07,
+          1.6448697606307055e-06
+        ]
+      ],
+      "triangles": 202,
+      "colliderTriangles": 94,
+      "colliderHullCount": 1,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.0000026284212506
+    },
+    {
+      "id": "fragment-002",
+      "exteriorAreaM2": 0.0030028593658098673,
+      "cutAreaM2": 0.0012275268447489364,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        0.03318489365380811,
+        0.16477065682804543,
+        -0.010032011451780743
+      ],
+      "volumeM3": 1.3464974157342717e-05,
+      "massKg": 0.021424889682611335,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          5.179551889555077e-06,
+          9.093686241707e-08,
+          -1.3978366579738675e-06
+        ],
+        [
+          9.093686241707e-08,
+          6.385630357440419e-06,
+          1.2883286908369173e-07
+        ],
+        [
+          -1.3978366579738675e-06,
+          1.2883286908369173e-07,
+          1.6128650534681788e-06
+        ]
+      ],
+      "triangles": 156,
+      "colliderTriangles": 104,
+      "colliderHullCount": 1,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 0.999998623733232
+    },
+    {
+      "id": "fragment-003",
+      "exteriorAreaM2": 0.007678442612215307,
+      "cutAreaM2": 0.001939069542096402,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        0.009352615013466003,
+        0.028765717405310563,
+        0.0034079090574643442
+      ],
+      "volumeM3": 1.0858291607631073e-05,
+      "massKg": 0.017277248148913696,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          3.549384322003358e-05,
+          6.9926877568697385e-06,
+          -9.808369653454983e-06
+        ],
+        [
+          6.9926877568697385e-06,
+          3.483710094738747e-05,
+          -5.45865858859991e-06
+        ],
+        [
+          -9.808369653454983e-06,
+          -5.45865858859991e-06,
+          2.5326415703554853e-05
+        ]
+      ],
+      "triangles": 1054,
+      "colliderTriangles": 866,
+      "colliderHullCount": 20,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.1251415322141165
+    },
+    {
+      "id": "fragment-004",
+      "exteriorAreaM2": 0.008504940598359857,
+      "cutAreaM2": 0.0007110445909047849,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.043986260252566474,
+        0.01847597989849763,
+        0.003476507464960345
+      ],
+      "volumeM3": 1.2082125008639158e-05,
+      "massKg": 0.019224559395121674,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          1.0870480878343585e-05,
+          1.1272150086899414e-06,
+          -5.079967540496132e-07
+        ],
+        [
+          1.1272150086899414e-06,
+          7.08929069980604e-06,
+          2.504322079768168e-07
+        ],
+        [
+          -5.079967540496132e-07,
+          2.504322079768168e-07,
+          5.327489845594365e-06
+        ]
+      ],
+      "triangles": 522,
+      "colliderTriangles": 988,
+      "colliderHullCount": 20,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.2044125478463856
+    },
+    {
+      "id": "fragment-005",
+      "exteriorAreaM2": 0.007693598367472118,
+      "cutAreaM2": 0.0008872230735255967,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.01301704304139268,
+        0.01664162217099443,
+        0.038551874528996576
+      ],
+      "volumeM3": 1.0896273770044388e-05,
+      "massKg": 0.017337683737582727,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          7.4358096976006895e-06,
+          8.499817593056252e-07,
+          -1.1227727053839362e-06
+        ],
+        [
+          8.499817593056252e-07,
+          6.510631922970092e-06,
+          -1.7314987021192764e-06
+        ],
+        [
+          -1.1227727053839362e-06,
+          -1.7314987021192764e-06,
+          7.462927005594737e-06
+        ]
+      ],
+      "triangles": 618,
+      "colliderTriangles": 634,
+      "colliderHullCount": 12,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.2370338337696274
+    },
+    {
+      "id": "fragment-006",
+      "exteriorAreaM2": 0.009078148418938715,
+      "cutAreaM2": 0.0012567999372330282,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        0.027628218746267013,
+        0.017912478912968818,
+        -0.024341878443998734
+      ],
+      "volumeM3": 1.2893190528748554e-05,
+      "massKg": 0.02051509208316531,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          1.5081409601063953e-05,
+          3.141724619982433e-06,
+          -7.963145386310548e-06
+        ],
+        [
+          3.141724619982433e-06,
+          2.1874302751908613e-05,
+          8.461027395930193e-07
+        ],
+        [
+          -7.963145386310548e-06,
+          8.461027395930193e-07,
+          1.4037565962750406e-05
+        ]
+      ],
+      "triangles": 972,
+      "colliderTriangles": 1194,
+      "colliderHullCount": 24,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.2159556012882426
+    },
+    {
+      "id": "fragment-007",
+      "exteriorAreaM2": 0.0058626437217188885,
+      "cutAreaM2": 0.0010497476938404252,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        0.030081152893611046,
+        0.06483946070540805,
+        0.0317731779348175
+      ],
+      "volumeM3": 8.225830729632258e-06,
+      "massKg": 0.013088589244272676,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          1.083066643458205e-05,
+          5.0662458826514015e-06,
+          3.48494715594559e-06
+        ],
+        [
+          5.0662458826514015e-06,
+          8.657612412301125e-06,
+          -4.218608313767968e-06
+        ],
+        [
+          3.48494715594559e-06,
+          -4.218608313767968e-06,
+          1.1321072535959558e-05
+        ]
+      ],
+      "triangles": 656,
+      "colliderTriangles": 410,
+      "colliderHullCount": 8,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.217683129487841
+    },
+    {
+      "id": "fragment-008",
+      "exteriorAreaM2": 0.006392506608333176,
+      "cutAreaM2": 0.0008834091774206932,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        0.027536356703551684,
+        0.1046331979180964,
+        -0.03865517660845438
+      ],
+      "volumeM3": 8.945695443862226e-06,
+      "massKg": 0.014234007119461923,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          4.916996408595803e-06,
+          6.040926267856652e-07,
+          -2.0569638180570174e-06
+        ],
+        [
+          6.040926267856652e-07,
+          4.648777923590678e-06,
+          1.289994275106558e-07
+        ],
+        [
+          -2.0569638180570174e-06,
+          1.289994275106558e-07,
+          6.1336603538813495e-06
+        ]
+      ],
+      "triangles": 456,
+      "colliderTriangles": 290,
+      "colliderHullCount": 4,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.2226338022340422
+    },
+    {
+      "id": "fragment-009",
+      "exteriorAreaM2": 0.008220404459399472,
+      "cutAreaM2": 0.0012469183232733925,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        0.044389568647461505,
+        0.07139458660457601,
+        -0.012791070442081554
+      ],
+      "volumeM3": 1.1553217467649331e-05,
+      "massKg": 0.0183829843883231,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          1.4547736859375455e-05,
+          -1.098600874740897e-06,
+          -2.252374176717993e-06
+        ],
+        [
+          -1.098600874740897e-06,
+          8.12025216242145e-06,
+          -4.346181462293713e-06
+        ],
+        [
+          -2.252374176717993e-06,
+          -4.346181462293713e-06,
+          8.850200632228816e-06
+        ]
+      ],
+      "triangles": 496,
+      "colliderTriangles": 312,
+      "colliderHullCount": 5,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.2195241641267158
+    },
+    {
+      "id": "fragment-010",
+      "exteriorAreaM2": 0.008289649172760174,
+      "cutAreaM2": 0.0005610083185741626,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        0.032549684078503865,
+        0.14332987938752528,
+        -0.009937462724982712
+      ],
+      "volumeM3": 1.0751694052938446e-05,
+      "massKg": 0.01710763468935275,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          1.532235310687107e-05,
+          4.814601072736408e-07,
+          -2.742918605114131e-06
+        ],
+        [
+          4.814601072736408e-07,
+          1.740428718789247e-05,
+          -7.727665466190634e-07
+        ],
+        [
+          -2.742918605114131e-06,
+          -7.727665466190634e-07,
+          4.825062803595624e-06
+        ]
+      ],
+      "triangles": 884,
+      "colliderTriangles": 1064,
+      "colliderHullCount": 21,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.2458598318480032
+    },
+    {
+      "id": "fragment-011",
+      "exteriorAreaM2": 0.007250289785469495,
+      "cutAreaM2": 0.0005486888461486378,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.028172063064842493,
+        0.146955392990786,
+        -0.0034856005130224185
+      ],
+      "volumeM3": 9.282540480438652e-06,
+      "massKg": 0.014769980502288624,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          1.6012021886277226e-05,
+          -4.012077994497242e-07,
+          -1.692995652398775e-06
+        ],
+        [
+          -4.012077994497242e-07,
+          1.8989011002302714e-05,
+          -1.2614412631754436e-06
+        ],
+        [
+          -1.692995652398775e-06,
+          -1.2614412631754436e-06,
+          4.60934582172626e-06
+        ]
+      ],
+      "triangles": 918,
+      "colliderTriangles": 794,
+      "colliderHullCount": 17,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.2457895158448204
+    },
+    {
+      "id": "fragment-012",
+      "exteriorAreaM2": 0.002568779092774415,
+      "cutAreaM2": 0.001978293283340697,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.009576117476138256,
+        0.16524708093609963,
+        -0.02549598165077783
+      ],
+      "volumeM3": 1.2852966957215765e-05,
+      "massKg": 0.020451090060386777,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          2.3594467118678775e-06,
+          1.50874175014015e-07,
+          2.9311444806357577e-06
+        ],
+        [
+          1.50874175014015e-07,
+          8.337063670382257e-06,
+          -1.0693534890468363e-07
+        ],
+        [
+          2.9311444806357577e-06,
+          -1.0693534890468363e-07,
+          6.36699560356379e-06
+        ]
+      ],
+      "triangles": 208,
+      "colliderTriangles": 82,
+      "colliderHullCount": 1,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.0000000738712587
+    },
+    {
+      "id": "fragment-013",
+      "exteriorAreaM2": 0.0019221656910564926,
+      "cutAreaM2": 0.0007917547904846862,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.021476198428292445,
+        0.16392747066253327,
+        -0.034273797413319276
+      ],
+      "volumeM3": 6.2237729840678065e-06,
+      "massKg": 0.009903000780774211,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          8.050067294217833e-07,
+          1.4660006832458927e-08,
+          9.333813128683395e-07
+        ],
+        [
+          1.4660006832458927e-08,
+          2.319321190774086e-06,
+          2.3278449483897683e-08
+        ],
+        [
+          9.333813128683395e-07,
+          2.3278449483897683e-08,
+          1.70978382437902e-06
+        ]
+      ],
+      "triangles": 140,
+      "colliderTriangles": 90,
+      "colliderHullCount": 1,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.000000553923277
+    },
+    {
+      "id": "fragment-014",
+      "exteriorAreaM2": 0.0020905624318551504,
+      "cutAreaM2": 0.002809402458201804,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        0.008254898857627455,
+        0.1625701077160296,
+        0.003774481248825549
+      ],
+      "volumeM3": 9.793942503606262e-06,
+      "massKg": 0.015583701479529073,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          4.2379198585157265e-06,
+          1.990937034596358e-07,
+          7.158442787208854e-07
+        ],
+        [
+          1.990937034596358e-07,
+          5.353590124885676e-06,
+          -7.556750112646175e-08
+        ],
+        [
+          7.158442787208854e-07,
+          -7.556750112646175e-08,
+          1.3405659705793364e-06
+        ]
+      ],
+      "triangles": 274,
+      "colliderTriangles": 66,
+      "colliderHullCount": 1,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.0000012934633855
+    },
+    {
+      "id": "fragment-015",
+      "exteriorAreaM2": 0.001970825531204452,
+      "cutAreaM2": 0.0010892635287821004,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.0077588432744157216,
+        0.16405734832745808,
+        0.033860258434565034
+      ],
+      "volumeM3": 9.151153015713669e-06,
+      "massKg": 0.014560922400541307,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          1.0881853155504859e-06,
+          9.403241712126707e-08,
+          -2.346157496103195e-07
+        ],
+        [
+          9.403241712126707e-08,
+          2.3016172763892533e-06,
+          3.0664423755099904e-08
+        ],
+        [
+          -2.346157496103195e-07,
+          3.0664423755099904e-08,
+          1.4928517774219912e-06
+        ]
+      ],
+      "triangles": 108,
+      "colliderTriangles": 72,
+      "colliderHullCount": 1,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 0.999997817960412
+    },
+    {
+      "id": "fragment-016",
+      "exteriorAreaM2": 0.005903599721172598,
+      "cutAreaM2": 0.0010083777441836682,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        0.00013053775817384775,
+        0.07186761711693943,
+        -0.048972002401584114
+      ],
+      "volumeM3": 8.278526102055158e-06,
+      "massKg": 0.013172435862004882,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          9.308886050675823e-06,
+          2.8233217840306206e-06,
+          -1.982622161643043e-07
+        ],
+        [
+          2.8233217840306206e-06,
+          2.3361017679337074e-06,
+          2.737488270911514e-07
+        ],
+        [
+          -1.982622161643043e-07,
+          2.737488270911514e-07,
+          1.1494657177111407e-05
+        ]
+      ],
+      "triangles": 328,
+      "colliderTriangles": 208,
+      "colliderHullCount": 4,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.1741852915497797
+    },
+    {
+      "id": "fragment-017",
+      "exteriorAreaM2": 0.006865729305099976,
+      "cutAreaM2": 0.0008611212146075994,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.037265226060566606,
+        0.09924860514214676,
+        -0.02888498678195352
+      ],
+      "volumeM3": 9.629831629080887e-06,
+      "massKg": 0.015322575290845996,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          8.768888979616201e-06,
+          7.513165625282192e-07,
+          2.1738929375870605e-06
+        ],
+        [
+          7.513165625282192e-07,
+          5.378317550474079e-06,
+          -1.2382653359385134e-06
+        ],
+        [
+          2.1738929375870605e-06,
+          -1.2382653359385134e-06,
+          6.471724813089254e-06
+        ]
+      ],
+      "triangles": 450,
+      "colliderTriangles": 300,
+      "colliderHullCount": 6,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.1606236610302374
+    },
+    {
+      "id": "fragment-018",
+      "exteriorAreaM2": 0.0018738516039255408,
+      "cutAreaM2": 0.0009358740792690474,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.036066723566590596,
+        0.16431798299502282,
+        0.008687857159531834
+      ],
+      "volumeM3": 7.653966366869531e-06,
+      "massKg": 0.012178663184078427,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          1.6265671327553726e-06,
+          -1.742378606901133e-08,
+          4.492377544664544e-08
+        ],
+        [
+          -1.742378606901133e-08,
+          1.9014154698209926e-06,
+          -8.018282349703824e-08
+        ],
+        [
+          4.492377544664544e-08,
+          -8.018282349703824e-08,
+          5.206439022044653e-07
+        ]
+      ],
+      "triangles": 128,
+      "colliderTriangles": 78,
+      "colliderHullCount": 1,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 0.9999998824425247
+    },
+    {
+      "id": "fragment-019",
+      "exteriorAreaM2": 0.0018076498142097328,
+      "cutAreaM2": 0.0018225491370636303,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.01589045109526527,
+        0.16396260840138172,
+        0.004052573490215713
+      ],
+      "volumeM3": 9.584666586156403e-06,
+      "massKg": 0.015250710610612667,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          3.2799922585887205e-06,
+          2.024405081130296e-08,
+          1.4876661544333393e-06
+        ],
+        [
+          2.024405081130296e-08,
+          4.366719381302855e-06,
+          -9.483725710192506e-08
+        ],
+        [
+          1.4876661544333393e-06,
+          -9.483725710192506e-08,
+          1.3893535751376639e-06
+        ]
+      ],
+      "triangles": 252,
+      "colliderTriangles": 38,
+      "colliderHullCount": 1,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.0000011125589026
+    },
+    {
+      "id": "fragment-020",
+      "exteriorAreaM2": 0.000238263719245428,
+      "cutAreaM2": 0.0002653593008247837,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.037828336001274915,
+        0.05161101754983343,
+        0.034834306859010435
+      ],
+      "volumeM3": 1.5741805683678324e-07,
+      "massKg": 0.0002504768640747774,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          5.419018164075769e-09,
+          3.2206567582754646e-10,
+          -3.039222125259553e-09
+        ],
+        [
+          3.2206567582754646e-10,
+          6.1743100072377484e-09,
+          1.2758192665067304e-10
+        ],
+        [
+          -3.039222125259553e-09,
+          1.2758192665067304e-10,
+          4.917229100108558e-09
+        ]
+      ],
+      "triangles": 64,
+      "colliderTriangles": 56,
+      "colliderHullCount": 1,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.000043450328196
+    },
+    {
+      "id": "fragment-021",
+      "exteriorAreaM2": 0.005061827414959461,
+      "cutAreaM2": 0.0007456951635424274,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.021869411729439552,
+        0.08085070119783404,
+        0.043820590752724195
+      ],
+      "volumeM3": 7.1021558868727605e-06,
+      "massKg": 0.011300646002501245,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          4.519360173541909e-06,
+          1.4538790663024143e-06,
+          -7.765752388137017e-07
+        ],
+        [
+          1.4538790663024143e-06,
+          2.0108124904435095e-06,
+          7.556370538605786e-07
+        ],
+        [
+          -7.765752388137017e-07,
+          7.556370538605786e-07,
+          5.628578196815405e-06
+        ]
+      ],
+      "triangles": 320,
+      "colliderTriangles": 216,
+      "colliderHullCount": 4,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.133779008133921
+    },
+    {
+      "id": "fragment-022",
+      "exteriorAreaM2": 0.005514503430644108,
+      "cutAreaM2": 0.0009243503412679373,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.046501335681109,
+        0.07341378739489289,
+        0.012591407049626005
+      ],
+      "volumeM3": 7.912612451238477e-06,
+      "massKg": 0.012590209746269352,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          5.794149312688227e-06,
+          2.040029999605556e-07,
+          -7.550324415018473e-07
+        ],
+        [
+          2.040029999605556e-07,
+          3.215035721179824e-06,
+          5.986687929077584e-09
+        ],
+        [
+          -7.550324415018473e-07,
+          5.986687929077584e-09,
+          3.1855537752012764e-06
+        ]
+      ],
+      "triangles": 364,
+      "colliderTriangles": 264,
+      "colliderHullCount": 4,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.165145758496261
+    },
+    {
+      "id": "fragment-023",
+      "exteriorAreaM2": 0.006470818807461593,
+      "cutAreaM2": 0.0007800385806016758,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.007762893581374944,
+        0.1251375006799527,
+        0.04163949221177308
+      ],
+      "volumeM3": 8.851320068190991e-06,
+      "massKg": 0.01408384106723756,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          2.564962883464666e-06,
+          8.941490364646258e-07,
+          -2.110412000633269e-06
+        ],
+        [
+          8.941490364646258e-07,
+          9.93935050154808e-06,
+          2.57458733255066e-07
+        ],
+        [
+          -2.110412000633269e-06,
+          2.57458733255066e-07,
+          1.017710373123536e-05
+        ]
+      ],
+      "triangles": 652,
+      "colliderTriangles": 826,
+      "colliderHullCount": 15,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.218100364017612
+    },
+    {
+      "id": "fragment-024",
+      "exteriorAreaM2": 0.0012710091298638168,
+      "cutAreaM2": 0.00036977787971561053,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.0491627622445464,
+        0.1266038867248918,
+        0.0005573011236521222
+      ],
+      "volumeM3": 1.7484490772564523e-06,
+      "massKg": 0.0027820572218072333,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          4.2368753614469537e-07,
+          -5.519238111661913e-09,
+          1.2217206619103742e-08
+        ],
+        [
+          -5.519238111661913e-09,
+          3.4943229601258145e-07,
+          2.8010674272097437e-08
+        ],
+        [
+          1.2217206619103742e-08,
+          2.8010674272097437e-08,
+          9.051585222124565e-08
+        ]
+      ],
+      "triangles": 316,
+      "colliderTriangles": 294,
+      "colliderHullCount": 6,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.2081897297498572
+    },
+    {
+      "id": "fragment-025",
+      "exteriorAreaM2": 0.002195071067893741,
+      "cutAreaM2": 0.0004883415897450069,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        0.043927048293419195,
+        0.11981030971850827,
+        0.020608480691748567
+      ],
+      "volumeM3": 3.0633176838794356e-06,
+      "massKg": 0.004874219784827389,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          1.1311791490478283e-06,
+          -2.528415800332568e-08,
+          3.271222219358394e-07
+        ],
+        [
+          -2.528415800332568e-08,
+          1.0436210656404648e-06,
+          5.4694929201388974e-08
+        ],
+        [
+          3.271222219358394e-07,
+          5.4694929201388974e-08,
+          3.942180395167048e-07
+        ]
+      ],
+      "triangles": 372,
+      "colliderTriangles": 290,
+      "colliderHullCount": 7,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.1658196899287396
+    },
+    {
+      "id": "fragment-026",
+      "exteriorAreaM2": 0.004269597050595371,
+      "cutAreaM2": 0.000807683470794929,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        0.014604337130841341,
+        0.007496932265716981,
+        0.025705526502004455
+      ],
+      "volumeM3": 6.050924273751502e-06,
+      "massKg": 0.0096279713223412,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          4.140664893531084e-06,
+          -1.6190964040540873e-07,
+          -1.2118142497695037e-06
+        ],
+        [
+          -1.6190964040540873e-07,
+          4.275910398978313e-06,
+          -1.248163942350838e-06
+        ],
+        [
+          -1.2118142497695037e-06,
+          -1.248163942350838e-06,
+          2.656034317183296e-06
+        ]
+      ],
+      "triangles": 582,
+      "colliderTriangles": 338,
+      "colliderHullCount": 6,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.144099688006097
+    },
+    {
+      "id": "fragment-027",
+      "exteriorAreaM2": 0.00010769396074214922,
+      "cutAreaM2": 0.0001451634118258532,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.046492220531280715,
+        0.06349241623231215,
+        -0.01995599504225291
+      ],
+      "volumeM3": 1.497086805133111e-07,
+      "massKg": 0.0002382100349429848,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          5.325345686804612e-09,
+          5.883196548087094e-10,
+          1.5716481510914842e-10
+        ],
+        [
+          5.883196548087094e-10,
+          8.089011013696725e-10,
+          -1.0047797620413755e-09
+        ],
+        [
+          1.5716481510914842e-10,
+          -1.0047797620413755e-09,
+          4.9344752336711965e-09
+        ]
+      ],
+      "triangles": 44,
+      "colliderTriangles": 28,
+      "colliderHullCount": 1,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.0469303735840776
+    },
+    {
+      "id": "fragment-028",
+      "exteriorAreaM2": 0.005240936086010098,
+      "cutAreaM2": 0.0008135888519471982,
+      "sourceComponent": null,
+      "sourceRole": "body",
+      "positionM": [
+        -0.021287406316712203,
+        0.012510583590233222,
+        -0.029439986721459085
+      ],
+      "volumeM3": 7.4312857622844e-06,
+      "massKg": 0.011824343351604632,
+      "centerOfMassLocalM": [
+        0,
+        0,
+        0
+      ],
+      "inertiaKgM2": [
+        [
+          4.487239185113378e-06,
+          2.12946541291529e-06,
+          -9.99008568188442e-07
+        ],
+        [
+          2.12946541291529e-06,
+          4.4125173402540314e-06,
+          4.566324050305435e-07
+        ],
+        [
+          -9.99008568188442e-07,
+          4.566324050305435e-07,
+          5.921991677952969e-06
+        ]
+      ],
+      "triangles": 552,
+      "colliderTriangles": 446,
+      "colliderHullCount": 8,
+      "collider": "compound convex hulls; volume-adaptive conservative approximation",
+      "watertight": true,
+      "convexHullVolumeRatio": 1.1305759795849568
+    }
+  ],
+  "provenance": "Original project-authored parametric meshes; exact Manifold plane partitions; no third-party models",
+  "runtimeValidation": "not_performed"
+}

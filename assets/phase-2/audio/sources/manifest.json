@@ -1,0 +1,83 @@
+{
+  "sources": [
+    {
+      "group": "glass",
+      "id": 1591,
+      "title": "Broken Glass of Champagne",
+      "page": "https://bigsoundbank.com/broken-glass-of-champagne-s1591.html",
+      "download": "https://bigsoundbank.com/UPLOAD/bwf-en/1591.wav",
+      "author": "Joseph Sardin",
+      "publisher": "BigSoundBank / LaSonothèque",
+      "license": "CC0 1.0 / public-domain equivalent as stated by source",
+      "licensePage": "https://bigsoundbank.com/licenses.html",
+      "file": "sources/cc0/1591.wav",
+      "sha256": "9b744fed9a024c7b941d26cb2ac2a9ee3b37be47c3e949457a32d6e2cce8692f"
+    },
+    {
+      "group": "glass",
+      "id": 387,
+      "title": "A Mirror Explodes",
+      "page": "https://bigsoundbank.com/mirror-explodes-s0387.html",
+      "download": "https://bigsoundbank.com/UPLOAD/bwf-en/0387.wav",
+      "author": "Joseph Sardin",
+      "publisher": "BigSoundBank / LaSonothèque",
+      "license": "CC0 1.0 / public-domain equivalent as stated by source",
+      "licensePage": "https://bigsoundbank.com/licenses.html",
+      "file": "sources/cc0/387.wav",
+      "sha256": "54567de24967f81ba5131b0997190468865353d0e0d36b519d40b1f44f6f2673"
+    },
+    {
+      "group": "glass",
+      "id": 1121,
+      "title": "Broken Christmas Ball #1",
+      "page": "https://bigsoundbank.com/broken-christmas-ball-1-s1121.html",
+      "download": "https://bigsoundbank.com/UPLOAD/bwf-en/1121.wav",
+      "author": "Joseph Sardin",
+      "publisher": "BigSoundBank / LaSonothèque",
+      "license": "CC0 1.0 / public-domain equivalent as stated by source",
+      "licensePage": "https://bigsoundbank.com/licenses.html",
+      "file": "sources/cc0/1121.wav",
+      "sha256": "f8ebf19fdf14315e1a1227e2ddd855f01b19a4fb328ca6559a6fa71e8bb72a00"
+    },
+    {
+      "group": "ceramic",
+      "id": 1643,
+      "title": "Broken Plate #1",
+      "page": "https://bigsoundbank.com/broken-plate-1-s1643.html",
+      "download": "https://bigsoundbank.com/UPLOAD/bwf-en/1643.wav",
+      "author": "Joseph Sardin",
+      "publisher": "BigSoundBank / LaSonothèque",
+      "license": "CC0 1.0 / public-domain equivalent as stated by source",
+      "licensePage": "https://bigsoundbank.com/licenses.html",
+      "file": "sources/cc0/1643.wav",
+      "sha256": "9d80fa342793c9eaaca048aaa3365c59f1794c110b86f3766cbee80ab068dcbe"
+    },
+    {
+      "group": "ceramic",
+      "id": 1644,
+      "title": "Broken plate #2",
+      "page": "https://bigsoundbank.com/broken-plate-2-s1644.html",
+      "download": "https://bigsoundbank.com/UPLOAD/bwf-en/1644.wav",
+      "author": "Joseph Sardin",
+      "publisher": "BigSoundBank / LaSonothèque",
+      "license": "CC0 1.0 / public-domain equivalent as stated by source",
+      "licensePage": "https://bigsoundbank.com/licenses.html",
+      "file": "sources/cc0/1644.wav",
+      "sha256": "99f719ff28291dfafa78b2ff0b0066f9f6c5a07a3c1004bc6aad00266cd9dc67"
+    },
+    {
+      "group": "ceramic",
+      "id": 1645,
+      "title": "Broken plate #3",
+      "page": "https://bigsoundbank.com/broken-plate-3-s1645.html",
+      "download": "https://bigsoundbank.com/UPLOAD/bwf-en/1645.wav",
+      "author": "Joseph Sardin",
+      "publisher": "BigSoundBank / LaSonothèque",
+      "license": "CC0 1.0 / public-domain equivalent as stated by source",
+      "licensePage": "https://bigsoundbank.com/licenses.html",
+      "file": "sources/cc0/1645.wav",
+      "sha256": "d089066a7f435a996ca22abc03d153c592b2b2c5915ed155ab1db5460c075365"
+    }
+  ],
+  "use": "deterministic trim, split, gentle high-pass and level matching; no ML training"
+}

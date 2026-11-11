@@ -1,0 +1,1111 @@
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title></title><style>
+*{box-sizing:border-box}body{margin:0;background:#DAD6D3;background-image:none;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;color:var(--porcelain)}button{font:inherit;color:inherit;cursor:pointer;border:0;outline-offset:5px}button:focus-visible{outline:3px solid var(--accent)}button:active{transform:translateY(2px)}#viewport{position:relative;width:100vw;height:100vh;min-height:600px;overflow:hidden}#scene{position:absolute;transform-origin:0 0;overflow:hidden}p,h1,h2,h3{margin:0}#scene>.panel{position:absolute}.panel{background:var(--smoke);box-shadow:0 18px 55px #0002;border-radius:28px;color:var(--porcelain)}.logo{position:absolute;inset:0;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:30px}.logo .mark{width:145px;height:145px}.logo h1{font-size:60px;font-weight:500;letter-spacing:6px;color:#2C3832}.logo .mark path{stroke:#35473A}.logo small{color:#536658;font-size:16px}.dialog{top:50%;left:50%;transform:translate(-50%,-50%);text-align:left}.dialog .mark{height:52px;width:52px;margin:0 0 26px -7px}.dialog h2{font-size:30px;line-height:1.3;font-weight:500;max-width:100%;margin-bottom:22px}.dialog p{font-size:20px;line-height:1.8;color:var(--muted)}.actions{display:flex;gap:14px;margin-top:32px}.action{padding:0 26px;background:var(--accent);color:#243E2C;border-radius:16px;font-weight:600;flex:1;box-shadow:inset 0 1px 0 #fff8,0 5px 12px #0002}.action.secondary{background:transparent;color:var(--porcelain);box-shadow:inset 0 0 0 1px #D6DDD548}.mode-note{font-size:14px;color:var(--muted);margin-top:22px;display:flex;align-items:center;gap:9px}.mode-note i{width:6px;height:6px;background:var(--accent);border-radius:100%}.counter{position:absolute;left:50%;transform:translateX(-50%);padding:16px 24px;display:flex;gap:0;align-items:center}.total{flex-shrink:0}.total strong{font-size:32px;line-height:1;font-weight:500;font-variant-numeric:tabular-nums}.total span{display:block;font-size:15px;color:var(--muted);margin-top:5px}.count-grid{flex:1;display:flex;overflow-x:auto;scrollbar-width:none;touch-action:pan-x;gap:0}.count-cell{font-size:13px;display:flex;flex-direction:column;gap:5px;min-width:0}.count-cell b{font-weight:500;font-size:19px;color:var(--porcelain);font-variant-numeric:tabular-nums}.count-cell span{color:var(--muted);line-height:1.3;white-space:normal}.shelf{position:absolute;padding:24px}.shelf-title{font-size:20px;font-weight:500;margin-bottom:15px}.shelf-title small{float:right;color:var(--muted);font-size:13px;padding-top:4px}.strip{display:flex;gap:10px;overflow:auto;scrollbar-width:none;touch-action:pan-x}.strip::-webkit-scrollbar{display:none}.item{flex-shrink:0;background:transparent;border-radius:15px;text-align:left;padding:0;position:relative;overflow:hidden}.item.selected{box-shadow:inset 0 0 0 2px var(--accent);background:#B9E6C514}.item .thumb{width:100%;height:88px;border-radius:12px;opacity:.95;pointer-events:none;background-repeat:no-repeat}.item .caption{font-size:13px;display:block;padding:9px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.item.selected .caption{color:var(--accent)}.item.function{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;background:#FFFFFF09;text-align:center}.item.function svg{width:30px;height:30px;pointer-events:none}.item.function span{font-size:14px}.instructions{font-size:13px;color:var(--muted);margin-top:13px}.toast{position:absolute;left:50%;bottom:95px;transform:translateX(-50%);max-width:600px;padding:18px 24px;font-size:16px;background:var(--smoke);border-radius:16px;color:var(--porcelain)}.ghost{opacity:.25;pointer-events:none}.hand{width:70px;height:70px;margin-bottom:25px;color:var(--accent)}.exit h1{font-size:36px}.exit button{flex:0 0 220px}.gate-back{position:absolute;inset:0;background:#DAD6D326}
+</style></head><body><div id="viewport"><main id="scene"></main></div><script id="pico-design-spec" type="application/json">{
+  "schemaVersion": "1.0",
+  "metadata": {
+    "projectName": "Shatter Realm",
+    "sourceMode": "product_doc",
+    "revision": 4
+  },
+  "experience": {
+    "subject": "MR发泄解压",
+    "user": "使用手势的单人体验者",
+    "context": "已在系统获得空间信息的安全真实房间",
+    "singleJob": "抓取虚拟日用品并亲手投掷，体验真实碎裂",
+    "space": "full",
+    "form": "stage_mixed",
+    "signature": "裂隙标记与真实断面，中央视野让给投掷"
+  },
+  "theme": {
+    "scheme": "vibrant",
+    "colorScheme": {
+      "fillPrimary": {
+        "source": "vibrant",
+        "role": "fillPrimary"
+      },
+      "fillSecondary": {
+        "source": "vibrant",
+        "role": "fillSecondary"
+      },
+      "fillTertiary": {
+        "source": "vibrant",
+        "role": "fillTertiary"
+      },
+      "fillLight": {
+        "source": "vibrant",
+        "role": "fillLight"
+      },
+      "labelPrimaryLight": {
+        "source": "vibrant",
+        "role": "labelPrimaryLight"
+      },
+      "labelPrimary": {
+        "source": "vibrant",
+        "role": "labelPrimary"
+      },
+      "labelSecondary": {
+        "source": "vibrant",
+        "role": "labelSecondary"
+      },
+      "labelTertiary": {
+        "source": "vibrant",
+        "role": "labelTertiary"
+      },
+      "labelQuaternary": {
+        "source": "vibrant",
+        "role": "labelQuaternary"
+      },
+      "lightenHover": {
+        "source": "vibrant",
+        "role": "lightenHover"
+      },
+      "lightenPressed": {
+        "source": "vibrant",
+        "role": "lightenPressed"
+      },
+      "error": {
+        "source": "vibrant",
+        "role": "error"
+      },
+      "alert": {
+        "source": "vibrant",
+        "role": "alert"
+      },
+      "passable": {
+        "source": "vibrant",
+        "role": "passable"
+      },
+      "interaction": {
+        "source": "vibrant",
+        "role": "interaction"
+      },
+      "dividerLine": {
+        "source": "vibrant",
+        "role": "dividerLine"
+      }
+    },
+    "brandColors": {
+      "smoke": "#222725ED",
+      "porcelain": "#F4F1E8",
+      "muted": "#B9C1BB",
+      "accent": "#B9E6C5",
+      "warning": "#E6C394",
+      "pressed": "#485A4D",
+      "room": "#DAD6D3"
+    },
+    "typography": {
+      "display": {
+        "family": "sans-serif",
+        "sizeDp": 52,
+        "lineHeightDp": 64,
+        "weight": 500
+      },
+      "body": {
+        "family": "sans-serif",
+        "sizeDp": 20,
+        "lineHeightDp": 32,
+        "weight": 500
+      },
+      "label": {
+        "family": "sans-serif",
+        "sizeDp": 15,
+        "lineHeightDp": 22,
+        "weight": 500
+      }
+    },
+    "spacing": {
+      "small": 8,
+      "regular": 16,
+      "medium": 24,
+      "large": 32
+    }
+  },
+  "surfaces": [
+    {
+      "id": "experience-stage",
+      "type": "stage_mixed",
+      "defaultSize": {
+        "width": 3,
+        "height": 2.5,
+        "depth": 3,
+        "unit": "m"
+      },
+      "minSize": {
+        "width": 2,
+        "height": 2,
+        "depth": 2,
+        "unit": "m"
+      },
+      "maxSize": {
+        "width": 5,
+        "height": 3,
+        "depth": 5,
+        "unit": "m"
+      },
+      "rootNodeId": "main",
+      "placement": {
+        "policy": "room scale; extent values are design envelope, never create fake environment planes"
+      }
+    },
+    {
+      "id": "counter-panel",
+      "type": "augment",
+      "defaultSize": {
+        "width": 0.22,
+        "height": 0.096,
+        "unit": "m"
+      },
+      "minSize": {
+        "width": 0.22,
+        "height": 0.096,
+        "unit": "m"
+      },
+      "maxSize": {
+        "width": 0.72,
+        "height": 0.096,
+        "unit": "m"
+      },
+      "rootNodeId": "counter",
+      "placement": {
+        "reference": "head",
+        "distanceM": 1.35,
+        "elevationDegrees": 13,
+        "interactive": true,
+        "interactionScope": "scroll revealed item counts only; total remains pinned"
+      }
+    },
+    {
+      "id": "selection-panel",
+      "type": "augment",
+      "defaultSize": {
+        "width": 0.48,
+        "height": 0.2,
+        "unit": "m"
+      },
+      "minSize": {
+        "width": 0.42,
+        "height": 0.2,
+        "unit": "m"
+      },
+      "maxSize": {
+        "width": 0.56,
+        "height": 0.23,
+        "unit": "m"
+      },
+      "rootNodeId": "shelf",
+      "placement": {
+        "reference": "head",
+        "distanceM": 0.65,
+        "azimuthDegrees": 23,
+        "elevationDegrees": -18,
+        "freezeWhileTouching": true
+      }
+    },
+    {
+      "id": "gate-panel",
+      "type": "augment",
+      "defaultSize": {
+        "width": 0.62,
+        "height": 0.4,
+        "unit": "m"
+      },
+      "minSize": {
+        "width": 0.56,
+        "height": 0.4,
+        "unit": "m"
+      },
+      "maxSize": {
+        "width": 0.72,
+        "height": 0.46,
+        "unit": "m"
+      },
+      "rootNodeId": "safety",
+      "placement": {
+        "reference": "head",
+        "distanceM": 1.1,
+        "azimuthDegrees": 0,
+        "elevationDegrees": 0
+      }
+    }
+  ],
+  "initialStateId": "cold-logo",
+  "states": [
+    {
+      "id": "cold-logo",
+      "surfaceRoots": {
+        "experience-stage": "logo"
+      }
+    },
+    {
+      "id": "safety-gate",
+      "surfaceRoots": {
+        "experience-stage": "safety"
+      }
+    },
+    {
+      "id": "experience",
+      "surfaceRoots": {
+        "experience-stage": "main"
+      }
+    },
+    {
+      "id": "controller-gate",
+      "surfaceRoots": {
+        "experience-stage": "controller"
+      }
+    },
+    {
+      "id": "reset-gate",
+      "surfaceRoots": {
+        "experience-stage": "reset"
+      }
+    },
+    {
+      "id": "exited",
+      "surfaceRoots": {
+        "experience-stage": "exit"
+      }
+    }
+  ],
+  "transitions": [
+    {
+      "id": "logo-finished",
+      "from": "cold-logo",
+      "to": "safety-gate",
+      "trigger": {
+        "nodeId": "logo",
+        "event": "timer"
+      }
+    },
+    {
+      "id": "consent",
+      "from": "safety-gate",
+      "to": "experience",
+      "trigger": {
+        "nodeId": "safety",
+        "event": "agree"
+      }
+    },
+    {
+      "id": "decline",
+      "from": "safety-gate",
+      "to": "exited",
+      "trigger": {
+        "nodeId": "safety",
+        "event": "exit"
+      }
+    },
+    {
+      "id": "detect-controller",
+      "from": "experience",
+      "to": "controller-gate",
+      "trigger": {
+        "nodeId": "main",
+        "event": "active-controller"
+      }
+    },
+    {
+      "id": "resume-hands",
+      "from": "controller-gate",
+      "to": "experience",
+      "trigger": {
+        "nodeId": "controller",
+        "event": "hands-tracked"
+      }
+    },
+    {
+      "id": "ask-reset",
+      "from": "experience",
+      "to": "reset-gate",
+      "trigger": {
+        "nodeId": "shelf",
+        "event": "reset"
+      }
+    },
+    {
+      "id": "confirm-reset",
+      "from": "reset-gate",
+      "to": "experience",
+      "trigger": {
+        "nodeId": "reset",
+        "event": "confirm"
+      }
+    },
+    {
+      "id": "cancel-reset",
+      "from": "reset-gate",
+      "to": "experience",
+      "trigger": {
+        "nodeId": "reset",
+        "event": "cancel"
+      }
+    },
+    {
+      "id": "restart",
+      "from": "exited",
+      "to": "cold-logo",
+      "trigger": {
+        "nodeId": "exit",
+        "event": "restart"
+      }
+    },
+    {
+      "id": "controller-from-logo",
+      "from": "cold-logo",
+      "to": "controller-gate",
+      "trigger": {
+        "nodeId": "logo",
+        "event": "active-controller"
+      }
+    },
+    {
+      "id": "controller-to-logo",
+      "from": "controller-gate",
+      "to": "cold-logo",
+      "trigger": {
+        "nodeId": "controller",
+        "event": "restore-logo"
+      }
+    },
+    {
+      "id": "controller-from-safety",
+      "from": "safety-gate",
+      "to": "controller-gate",
+      "trigger": {
+        "nodeId": "safety",
+        "event": "active-controller"
+      }
+    },
+    {
+      "id": "controller-to-safety",
+      "from": "controller-gate",
+      "to": "safety-gate",
+      "trigger": {
+        "nodeId": "controller",
+        "event": "restore-safety"
+      }
+    },
+    {
+      "id": "controller-from-reset",
+      "from": "reset-gate",
+      "to": "controller-gate",
+      "trigger": {
+        "nodeId": "reset",
+        "event": "active-controller"
+      }
+    },
+    {
+      "id": "controller-to-reset",
+      "from": "controller-gate",
+      "to": "reset-gate",
+      "trigger": {
+        "nodeId": "controller",
+        "event": "restore-reset"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "logo-finished",
+      "type": "transition",
+      "purpose": "logo-finished",
+      "transitionId": "logo-finished"
+    },
+    {
+      "id": "consent",
+      "type": "transition",
+      "purpose": "consent",
+      "transitionId": "consent"
+    },
+    {
+      "id": "decline",
+      "type": "transition",
+      "purpose": "decline",
+      "transitionId": "decline"
+    },
+    {
+      "id": "detect-controller",
+      "type": "transition",
+      "purpose": "detect-controller",
+      "transitionId": "detect-controller"
+    },
+    {
+      "id": "resume-hands",
+      "type": "transition",
+      "purpose": "resume-hands",
+      "transitionId": "resume-hands"
+    },
+    {
+      "id": "ask-reset",
+      "type": "transition",
+      "purpose": "ask-reset",
+      "transitionId": "ask-reset"
+    },
+    {
+      "id": "confirm-reset",
+      "type": "transition",
+      "purpose": "confirm-reset",
+      "transitionId": "confirm-reset"
+    },
+    {
+      "id": "cancel-reset",
+      "type": "transition",
+      "purpose": "cancel-reset",
+      "transitionId": "cancel-reset"
+    },
+    {
+      "id": "restart",
+      "type": "transition",
+      "purpose": "restart",
+      "transitionId": "restart"
+    },
+    {
+      "id": "refresh-models",
+      "type": "custom",
+      "purpose": "重新读取自定义模型目录"
+    },
+    {
+      "id": "pick-item",
+      "type": "custom",
+      "purpose": "捏取物品，面板保持显示"
+    },
+    {
+      "id": "swipe-items",
+      "type": "custom",
+      "purpose": "横向触摸滚动，末尾为刷新重置"
+    },
+    {
+      "id": "record-shatter",
+      "type": "custom",
+      "purpose": "单物品首次成功碎裂后更新该物品及总数"
+    },
+    {
+      "id": "hot-resume",
+      "type": "custom",
+      "purpose": "同一进程生命周期恢复时保留安全同意状态和场景"
+    },
+    {
+      "id": "tracking-lost",
+      "type": "custom",
+      "purpose": "停止生成新物品并显示追踪状态，不创建虚假速度"
+    },
+    {
+      "id": "controller-from-logo",
+      "type": "transition",
+      "purpose": "controller-from-logo",
+      "transitionId": "controller-from-logo"
+    },
+    {
+      "id": "controller-to-logo",
+      "type": "transition",
+      "purpose": "controller-to-logo",
+      "transitionId": "controller-to-logo"
+    },
+    {
+      "id": "controller-from-safety",
+      "type": "transition",
+      "purpose": "controller-from-safety",
+      "transitionId": "controller-from-safety"
+    },
+    {
+      "id": "controller-to-safety",
+      "type": "transition",
+      "purpose": "controller-to-safety",
+      "transitionId": "controller-to-safety"
+    },
+    {
+      "id": "controller-from-reset",
+      "type": "transition",
+      "purpose": "controller-from-reset",
+      "transitionId": "controller-from-reset"
+    },
+    {
+      "id": "controller-to-reset",
+      "type": "transition",
+      "purpose": "controller-to-reset",
+      "transitionId": "controller-to-reset"
+    },
+    {
+      "id": "swipe-revealed-counters",
+      "type": "custom",
+      "purpose": "Scroll only successfully shattered item types in first-use order; keep total pinned"
+    }
+  ],
+  "dataCases": {
+    "normal": {
+      "locale": "zh",
+      "i18n": {
+        "zh": {
+          "name": "碎境",
+          "safetyTitle": "先照顾好现实中的自己",
+          "safety": "本应用仅供娱乐解压，请勿在真实世界模仿投掷易碎物品行为，请注意周边环境安全",
+          "agree": "同意",
+          "leave": "退出",
+          "total": "总投掷数量",
+          "countNote": "成功碎裂后计数",
+          "shelf": "挑一件，放下压力",
+          "instruction": "手指触碰后左右滑动 · 捏取物品后挥手松开",
+          "glass": "玻璃",
+          "ceramic": "陶瓷",
+          "plastic": "电子塑料",
+          "custom": "自定义模型",
+          "refresh": "刷新",
+          "reset": "重置",
+          "controllerTitle": "放下手柄，用双手释放",
+          "controller": "已检测到手柄正在使用。应用已切换为纯手势交互，请放下手柄，让双手进入追踪范围。",
+          "hands": "等待双手进入追踪范围",
+          "continueLabel": "继续",
+          "resetTitle": "让空间重新归零",
+          "resetBody": "清空场景内所有碎片，并将全部投掷计数归零。",
+          "confirmReset": "确认重置",
+          "cancel": "取消",
+          "ready": "已准备好",
+          "refreshing": "正在刷新自定义模型…",
+          "refreshed": "已刷新自定义模型",
+          "empty": "暂无自定义模型",
+          "loadError": "部分模型无法加载，其他物品仍可使用",
+          "noPlane": "暂未读取到环境平面，请在系统中确认空间信息",
+          "noHands": "未检测到双手，请将双手移入追踪范围",
+          "exitTitle": "已退出预览",
+          "back": "重新开始",
+          "picked": "已拿取",
+          "previewNote": "概念预览：不执行手势追踪或物理模拟"
+        },
+        "en": {
+          "name": "Shatter Realm",
+          "safetyTitle": "Take care of your real surroundings",
+          "safety": "This app is for entertainment and stress relief only. Do not imitate throwing fragile objects in the real world. Stay aware of your surroundings.",
+          "agree": "Agree",
+          "leave": "Exit",
+          "total": "Total throws",
+          "countNote": "Counted when an object shatters",
+          "shelf": "Pick an object. Let it go.",
+          "instruction": "Touch and swipe to browse · Pinch to grab, swing and release",
+          "glass": "Glass",
+          "ceramic": "Ceramic",
+          "plastic": "Electronics & plastic",
+          "custom": "Custom models",
+          "refresh": "Refresh",
+          "reset": "Reset",
+          "controllerTitle": "Set down your controllers",
+          "controller": "Active controller use detected. The app is now using hand interaction only. Set down your controllers and bring your hands into view.",
+          "hands": "Waiting for hand tracking",
+          "continueLabel": "Continue",
+          "resetTitle": "Start with a clear space",
+          "resetBody": "Remove all fragments and reset every throw count to zero.",
+          "confirmReset": "Reset everything",
+          "cancel": "Cancel",
+          "ready": "Ready",
+          "refreshing": "Refreshing custom models…",
+          "refreshed": "Custom models refreshed",
+          "empty": "No custom models found",
+          "loadError": "Some models could not be loaded. Other objects are still available.",
+          "noPlane": "No environment planes available. Check spatial data in system settings.",
+          "noHands": "Hands not detected. Bring your hands into view.",
+          "exitTitle": "Preview ended",
+          "back": "Start again",
+          "picked": "Picked up",
+          "previewNote": "Concept preview: no hand tracking or physics simulation"
+        }
+      },
+      "items": [
+        {
+          "id": "glass-cup",
+          "zh": "玻璃杯",
+          "en": "Tumbler",
+          "material": "glass",
+          "longestDimensionM": 0.11,
+          "massKg": 0.23,
+          "concept": "透明钠钙玻璃，轻微水痕；保留杯底厚度",
+          "targetFragments": 24,
+          "cell": 0
+        },
+        {
+          "id": "wine-bottle",
+          "zh": "红酒瓶",
+          "en": "Wine bottle",
+          "material": "glass",
+          "longestDimensionM": 0.3,
+          "massKg": 0.48,
+          "concept": "无商标深绿色玻璃，空瓶；瓶口与底部加厚",
+          "targetFragments": 32,
+          "cell": 1
+        },
+        {
+          "id": "glass-jar",
+          "zh": "玻璃罐",
+          "en": "Glass jar",
+          "material": "glass",
+          "longestDimensionM": 0.17,
+          "massKg": 0.38,
+          "concept": "透明宽口罐，烟灰盖；盖体为独立刚体",
+          "targetFragments": 28,
+          "cell": 2
+        },
+        {
+          "id": "lamp-shade",
+          "zh": "吊灯罩",
+          "en": "Lamp shade",
+          "material": "glass",
+          "longestDimensionM": 0.22,
+          "massKg": 0.4,
+          "concept": "乳白磨砂钟形玻璃罩，无电线；薄壳断口",
+          "targetFragments": 32,
+          "cell": 3
+        },
+        {
+          "id": "perfume-bottle",
+          "zh": "香水瓶",
+          "en": "Perfume bottle",
+          "material": "glass",
+          "longestDimensionM": 0.1,
+          "massKg": 0.22,
+          "concept": "琥珀色厚底玻璃，金属盖；不模拟液体",
+          "targetFragments": 20,
+          "cell": 4
+        },
+        {
+          "id": "plate",
+          "zh": "陶瓷餐盘",
+          "en": "Dinner plate",
+          "material": "ceramic",
+          "longestDimensionM": 0.25,
+          "massKg": 0.52,
+          "concept": "象牙白釉面，细微刀痕；断面露浅灰陶胎",
+          "targetFragments": 24,
+          "cell": 5
+        },
+        {
+          "id": "bowl",
+          "zh": "瓷碗",
+          "en": "Bowl",
+          "material": "ceramic",
+          "longestDimensionM": 0.15,
+          "massKg": 0.3,
+          "concept": "青灰釉，米白内壁；环形足圈可辨识",
+          "targetFragments": 22,
+          "cell": 6
+        },
+        {
+          "id": "vase",
+          "zh": "花瓶",
+          "en": "Vase",
+          "material": "ceramic",
+          "longestDimensionM": 0.26,
+          "massKg": 0.65,
+          "concept": "暖白釉细长瓶，轻微窑变；保持空心",
+          "targetFragments": 30,
+          "cell": 7
+        },
+        {
+          "id": "mug",
+          "zh": "马克杯",
+          "en": "Mug",
+          "material": "ceramic",
+          "longestDimensionM": 0.12,
+          "massKg": 0.34,
+          "concept": "砖红釉面与白色内壁；把手独立断裂",
+          "targetFragments": 24,
+          "cell": 8
+        },
+        {
+          "id": "ornament",
+          "zh": "装饰摆件",
+          "en": "Ornament",
+          "material": "ceramic",
+          "longestDimensionM": 0.16,
+          "massKg": 0.46,
+          "concept": "白色陶瓷抽象结形摆件；曲面可抓取",
+          "targetFragments": 28,
+          "cell": 9
+        },
+        {
+          "id": "keyboard",
+          "zh": "旧键盘",
+          "en": "Old keyboard",
+          "material": "plastic",
+          "longestDimensionM": 0.44,
+          "massKg": 0.68,
+          "concept": "磨旧黑色键盘，无品牌；外壳与键帽分离",
+          "targetFragments": 28,
+          "cell": 10
+        },
+        {
+          "id": "phone",
+          "zh": "旧手机",
+          "en": "Old phone",
+          "material": "plastic",
+          "longestDimensionM": 0.15,
+          "massKg": 0.18,
+          "concept": "黑色旧手机，熄屏；前盖后壳电路板分离",
+          "targetFragments": 18,
+          "cell": 11
+        },
+        {
+          "id": "remote",
+          "zh": "遥控器",
+          "en": "Remote",
+          "material": "plastic",
+          "longestDimensionM": 0.18,
+          "massKg": 0.12,
+          "concept": "炭黑塑料，磨损按键；壳体扣件和按键分离",
+          "targetFragments": 18,
+          "cell": 12
+        },
+        {
+          "id": "monitor",
+          "zh": "显示器模型",
+          "en": "Monitor",
+          "material": "plastic",
+          "longestDimensionM": 0.46,
+          "massKg": 2.4,
+          "concept": "厚边框旧显示器，熄屏；底座壳体屏片分离",
+          "targetFragments": 36,
+          "cell": 13
+        },
+        {
+          "id": "storage-box",
+          "zh": "塑料收纳盒",
+          "en": "Storage box",
+          "material": "plastic",
+          "longestDimensionM": 0.3,
+          "massKg": 0.42,
+          "concept": "烟灰半透聚丙烯，带盖；厚片撕裂状断口",
+          "targetFragments": 22,
+          "cell": 14
+        }
+      ],
+      "geometry": {
+        "logo": {
+          "widthPx": 500,
+          "heightPx": 300
+        },
+        "counter": {
+          "initialWidthPx": 220,
+          "maxWidthPx": 720,
+          "heightPx": 96,
+          "topPx": 38,
+          "totalWidthPx": 170,
+          "cellWidthPx": 130
+        },
+        "shelf": {
+          "widthPx": 660,
+          "heightPx": 238,
+          "rightPx": 42,
+          "bottomPx": 40,
+          "cardWidthPx": 112,
+          "cardHeightPx": 128
+        },
+        "modal": {
+          "widthPx": 620,
+          "paddingPx": 44,
+          "radiusPx": 28
+        },
+        "controls": {
+          "heightPx": 60,
+          "minTargetPx": 56
+        },
+        "view": {
+          "widthPx": 1600,
+          "heightPx": 1000
+        },
+        "motion": {
+          "logoMs": 1600,
+          "transitionMs": 220,
+          "feedbackMs": 140,
+          "recenterPolicy": "head-relative-with-damping; freeze panel while touching; never smooth throw velocity"
+        },
+        "customStyleException": {
+          "authority": "User explicitly requires fully custom photorealistic UI and forbids native control styling. This overrides generic SpatialUI Web control and root-surface styling guidance for this concept preview. Preserve PicoTheme and public SDK accessibility/input semantics in later runtime implementation; API feasibility is not yet verified."
+        }
+      },
+      "counters": {
+        "glass-cup": 0,
+        "wine-bottle": 0,
+        "glass-jar": 0,
+        "lamp-shade": 0,
+        "perfume-bottle": 0,
+        "plate": 0,
+        "bowl": 0,
+        "vase": 0,
+        "mug": 0,
+        "ornament": 0,
+        "keyboard": 0,
+        "phone": 0,
+        "remote": 0,
+        "monitor": 0,
+        "storage-box": 0
+      },
+      "customCounters": {},
+      "modelsFolder": "getExternalFilesDir(null)/models",
+      "units": "meters kilograms seconds",
+      "gravityMps2": 9.8,
+      "customModelFormats": [
+        "glb",
+        "fbx",
+        "obj"
+      ],
+      "physicsPolicies": {
+        "fragmentLifetime": "until explicit reset",
+        "fragmentCollision": "all fragments retain colliders; sleeping retains reactivation",
+        "releaseVelocity": "tracked hand linear and angular velocity, no aim correction",
+        "breakTrigger": "first collision with recognized real plane; idempotent per item",
+        "counterMeaning": "successfully shattered objects, not release attempts",
+        "customAudio": "one universal material set",
+        "importFailure": "isolate per file; preserve builtins",
+        "refresh": "append custom items before refresh and reset; keep held object and existing shards"
+      },
+      "runtimePolicies": {
+        "controllerResumeEvents": {
+          "cold-logo": "restore-logo",
+          "safety-gate": "restore-safety",
+          "experience": "hands-tracked",
+          "reset-gate": "restore-reset"
+        },
+        "counterExpansion": {
+          "initialTotalOnly": true,
+          "revealOn": "first successful shatter",
+          "hideZeroCounts": true,
+          "order": "first successful shatter",
+          "resetHidesItemCounts": true,
+          "overflow": "horizontal hand-gesture scroll; keep total pinned",
+          "customPerModel": true,
+          "stableKey": "model content identity, not list index"
+        },
+        "resetPolicy": {
+          "confirmationRequired": true,
+          "clearAllFragments": true,
+          "reclaimHeldAndThrownObjects": true,
+          "resetAllCounters": true
+        },
+        "customModelRoot": "getExternalFilesDir(null)/models",
+        "handTrackingLoss": "freeze held item; never fabricate release velocity",
+        "materialFractureRules": {
+          "glass": "curved thin shards and thick base",
+          "ceramic": "glazed shell and matte interior",
+          "plastic": "structural casing separation"
+        },
+        "audio": {
+          "groups": [
+            "glass",
+            "ceramic",
+            "plastic",
+            "custom"
+          ],
+          "events": [
+            "throw",
+            "shatter",
+            "fragment-land"
+          ],
+          "variantsPerEvent": 3,
+          "uiEvents": [
+            "confirm",
+            "cancel",
+            "pick",
+            "refresh-start",
+            "refresh-complete",
+            "failure",
+            "reset-complete"
+          ],
+          "sampleRateHz": 48000
+        }
+      },
+      "customExampleModels": [
+        {
+          "id": "custom-a",
+          "zh": "自定义花器",
+          "en": "Custom vessel"
+        },
+        {
+          "id": "custom-b",
+          "zh": "自定义雕塑",
+          "en": "Custom sculpture"
+        },
+        {
+          "id": "custom-c",
+          "zh": "自定义摆件",
+          "en": "Custom ornament"
+        }
+      ],
+      "launcherIcon": {
+        "conceptOnly": true,
+        "textFree": true,
+        "masterSizePx": 1024,
+        "foreground": "concepts/launcher/launcher-foreground.svg",
+        "background": "concepts/launcher/launcher-background.svg",
+        "monochrome": "concepts/launcher/launcher-monochrome.svg",
+        "androidReference": "https://developer.android.com/develop/ui/compose/system/icon_design_adaptive",
+        "packaging": "materialize Android resources and verify actual PICO launcher in phase 3"
+      }
+    },
+    "fallback": {
+      "customModels": [],
+      "planes": [],
+      "handsTracked": false
+    },
+    "error": {
+      "customImport": "skip-invalid-file",
+      "planePermission": "block-spawn-with-inline-message",
+      "controllerActive": "controller-gate",
+      "memoryPressure": "no silent fragment deletion; surface limit and seek user decision if measured"
+    }
+  },
+  "nodes": [
+    {
+      "id": "logo",
+      "kind": "domain_visual",
+      "rendererKey": "shatter-logo",
+      "purpose": "自定义logo设计预览；遵循用户禁止原生控件样式的要求",
+      "props": {
+        "view": "logo",
+        "data": "dataCases.normal",
+        "controlStyle": "custom-physical",
+        "languageSource": "system-only; query param used only by design reviewer"
+      }
+    },
+    {
+      "id": "safety",
+      "kind": "domain_visual",
+      "rendererKey": "shatter-safety",
+      "purpose": "自定义safety设计预览；遵循用户禁止原生控件样式的要求",
+      "props": {
+        "view": "safety",
+        "data": "dataCases.normal",
+        "controlStyle": "custom-physical",
+        "languageSource": "system-only; query param used only by design reviewer"
+      }
+    },
+    {
+      "id": "main",
+      "kind": "domain_visual",
+      "rendererKey": "shatter-main",
+      "purpose": "自定义main设计预览；遵循用户禁止原生控件样式的要求",
+      "props": {
+        "view": "main",
+        "data": "dataCases.normal",
+        "controlStyle": "custom-physical",
+        "languageSource": "system-only; query param used only by design reviewer"
+      }
+    },
+    {
+      "id": "controller",
+      "kind": "domain_visual",
+      "rendererKey": "shatter-controller",
+      "purpose": "自定义controller设计预览；遵循用户禁止原生控件样式的要求",
+      "props": {
+        "view": "controller",
+        "data": "dataCases.normal",
+        "controlStyle": "custom-physical",
+        "languageSource": "system-only; query param used only by design reviewer"
+      }
+    },
+    {
+      "id": "reset",
+      "kind": "domain_visual",
+      "rendererKey": "shatter-reset",
+      "purpose": "自定义reset设计预览；遵循用户禁止原生控件样式的要求",
+      "props": {
+        "view": "reset",
+        "data": "dataCases.normal",
+        "controlStyle": "custom-physical",
+        "languageSource": "system-only; query param used only by design reviewer"
+      }
+    },
+    {
+      "id": "exit",
+      "kind": "domain_visual",
+      "rendererKey": "shatter-exit",
+      "purpose": "自定义exit设计预览；遵循用户禁止原生控件样式的要求",
+      "props": {
+        "view": "exit",
+        "data": "dataCases.normal",
+        "controlStyle": "custom-physical",
+        "languageSource": "system-only; query param used only by design reviewer"
+      }
+    },
+    {
+      "id": "counter",
+      "kind": "domain_visual",
+      "rendererKey": "shatter-counter",
+      "purpose": "常驻counter",
+      "props": {
+        "data": "dataCases.normal"
+      }
+    },
+    {
+      "id": "shelf",
+      "kind": "domain_visual",
+      "rendererKey": "shatter-shelf",
+      "purpose": "常驻shelf",
+      "props": {
+        "data": "dataCases.normal"
+      }
+    }
+  ],
+  "responsiveRules": [],
+  "assets": [
+    {
+      "id": "catalog",
+      "kind": "image",
+      "src": "concepts/objects.png",
+      "purpose": "15种物品概念图；不是可导入的三维模型"
+    },
+    {
+      "id": "fracture",
+      "kind": "image",
+      "src": "concepts/fracture.png",
+      "purpose": "撞击与碎片保留的视觉故事板；不是运行截图"
+    },
+    {
+      "id": "mark",
+      "kind": "icon",
+      "src": "concepts/mark.svg",
+      "purpose": "裂隙方框启动标记概念"
+    },
+    {
+      "id": "refresh-icon",
+      "kind": "icon",
+      "src": "concepts/refresh.svg",
+      "purpose": "自定义刷新图标"
+    },
+    {
+      "id": "reset-icon",
+      "kind": "icon",
+      "src": "concepts/reset.svg",
+      "purpose": "自定义重置图标"
+    },
+    {
+      "id": "launcher-icon",
+      "kind": "image",
+      "src": "concepts/launcher/launcher-master.png",
+      "purpose": "安装包与系统应用列表图标的第一阶段设计稿，无文字、单一品牌标记"
+    }
+  ]
+}</script><script>
+const spec=JSON.parse(document.getElementById('pico-design-spec').textContent),data=spec.dataCases.normal,geo=data.geometry;
+const params=new URLSearchParams(location.search),lang=params.get('lang')==='en'?'en':'zh',t=data.i18n[lang],root=document.getElementById('scene');
+const symbols={"mark": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\"><g fill=\"none\" stroke=\"#F4F1E8\" stroke-width=\"5\" stroke-linecap=\"square\"><path d=\"M64 20H24v116h45M95 20h41v116H96\"/><path d=\"M89 15 68 69l27 20-22 58\"/></g></svg>", "refresh": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"><path d=\"M20 10a8 8 0 1 0-1 7M20 4v6h-6\"/></svg>", "reset": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"><path d=\"M4 7h16M9 4h6M6 7l1 14h10l1-14M10 10v7m4-7v7\"/></svg>"};
+for(const [k,v]of Object.entries(spec.theme.brandColors))document.documentElement.style.setProperty('--'+k,v);
+document.documentElement.lang=lang==='zh'?'zh-CN':'en';document.title=t.name;
+let state=params.get('state')||spec.initialStateId,selected=data.items[0].id,counts=structuredClone(data.counters),revealOrder=[],customCounts={},customModels=[],interruptedState='experience',consented=false,notice='',timer=null;
+if(!spec.states.some(x=>x.id===state))state=spec.initialStateId;
+function el(tag,cls,txt){const n=document.createElement(tag);if(cls)n.className=cls;if(txt!=null)n.textContent=txt;return n}
+function mark(){let x=el('div');x.innerHTML=symbols.mark;x.firstChild.classList.add('mark');return x.firstChild}
+function button(label,handler,secondary=false){const b=el('button','action'+(secondary?' secondary':''),label);b.style.height=geo.controls.heightPx+'px';b.onclick=handler;return b}
+function resize(){const scale=Math.min(innerWidth/geo.view.widthPx,innerHeight/geo.view.heightPx);Object.assign(root.style,{width:geo.view.widthPx+'px',height:geo.view.heightPx+'px',transform:`scale(${scale})`,left:(innerWidth-geo.view.widthPx*scale)/2+'px',top:(innerHeight-geo.view.heightPx*scale)/2+'px'})}addEventListener('resize',resize);resize();
+function transition(event){if(event==='active-controller')interruptedState=state;if(event==='hands-tracked'&&state==='controller-gate')event=data.runtimePolicies.controllerResumeEvents[interruptedState];const tr=spec.transitions.find(x=>x.from===state&&x.trigger.event===event);if(!tr)return false;if(tr.id==='consent')consented=true;if(tr.id==='confirm-reset'){revealOrder=[];for(const k in counts)counts[k]=0;for(const k in customCounts)customCounts[k]=0;window.designReview.shattered?.clear()}state=tr.to;render();return true}
+function notify(key){notice=t[key];render();clearTimeout(timer);timer=setTimeout(()=>{notice='';render()},geo.motion.transitionMs*8)}
+function counters(){const c=el('section','panel counter');const visible=revealOrder.filter(id=>(counts[id]||customCounts[id]||0)>0);Object.assign(c.style,{width:Math.min(geo.counter.maxWidthPx,geo.counter.initialWidthPx+visible.length*geo.counter.cellWidthPx)+'px',height:geo.counter.heightPx+'px',top:geo.counter.topPx+'px'});c.setAttribute('aria-label',t.total);const a=el('div','total');a.style.width=geo.counter.totalWidthPx+'px';a.append(el('strong','',Object.values(counts).concat(Object.values(customCounts)).reduce((a,b)=>a+b,0)),el('span','',t.total));c.append(a);if(visible.length){const g=el('div','count-grid');g.setAttribute('aria-label',t.countNote);for(const id of visible){const it=data.items.find(x=>x.id===id)||customModels.find(x=>x.id===id);const cell=el('div','count-cell');cell.style.minWidth=geo.counter.cellWidthPx+'px';cell.append(el('b','',counts[id]||customCounts[id]),el('span','',it?it[lang]:t.custom));g.append(cell)}c.append(g)}return c}
+function shelf(){const s=el('section','panel shelf');Object.assign(s.style,{width:geo.shelf.widthPx+'px',height:geo.shelf.heightPx+'px',right:geo.shelf.rightPx+'px',bottom:geo.shelf.bottomPx+'px'});const h=el('h3','shelf-title',t.shelf),sub=el('small','',t.glass+' / '+t.ceramic+' / '+t.plastic);h.append(sub);const strip=el('div','strip');strip.id='items-strip';data.items.forEach(it=>{const b=el('button','item'+(selected===it.id?' selected':''));b.style.width=geo.shelf.cardWidthPx+'px';b.style.height=geo.shelf.cardHeightPx+'px';b.setAttribute('aria-label',it[lang]);b.setAttribute('aria-pressed',String(selected===it.id));const thumb=el('div','thumb');thumb.style.backgroundImage=`url("${spec.assets.find(x=>x.id==='catalog').src}")`;thumb.style.backgroundSize='500% 300%';thumb.style.backgroundPosition=`${it.cell%5*25}% ${Math.floor(it.cell/5)*50}%`;const caption=el('span','caption',it[lang]);b.append(thumb,caption);b.onclick=()=>{const left=strip.scrollLeft;selected=it.id;render();document.getElementById('items-strip').scrollLeft=left};strip.append(b)});for(const k of ['refresh','reset']){const b=el('button','item function');b.style.width=geo.shelf.cardWidthPx+'px';b.style.height=geo.shelf.cardHeightPx+'px';b.innerHTML=symbols[k];b.append(el('span','',t[k]));b.setAttribute('aria-label',t[k]);b.onclick=()=>k==='reset'?transition('reset'):notify('empty');strip.append(b)}s.append(h,strip,el('p','instructions',t.instruction));return s}
+function dialog(title,body){const d=el('section','panel dialog');d.setAttribute('role','dialog');d.setAttribute('aria-modal','true');Object.assign(d.style,{width:geo.modal.widthPx+'px',padding:geo.modal.paddingPx+'px',borderRadius:geo.modal.radiusPx+'px'});d.append(mark(),el('h2','',title),el('p','',body));return d}
+function render(){root.replaceChildren();const current=spec.states.find(x=>x.id===state),node=spec.nodes.find(x=>x.id===current.surfaceRoots['experience-stage']),view=node.props.view;
+if(['main','reset'].includes(view)||(view==='controller'&&interruptedState==='experience'&&consented)){const base=el('div');base.append(counters(),shelf());if(view!=='main')base.className='ghost';root.append(base)}
+if(view==='logo'){const l=el('div','logo');l.append(mark(),el('h1','',t.name));root.append(l);if(!params.has('state'))setTimeout(()=>{if(state==='cold-logo')transition('timer')},geo.motion.logoMs)}
+if(view==='safety'){const d=dialog(t.safetyTitle,t.safety),a=el('div','actions');a.append(button(t.leave,()=>transition('exit'),true),button(t.agree,()=>transition('agree')));d.append(a);root.append(d)}
+if(view==='controller'){const d=dialog(t.controllerTitle,t.controller),note=el('div','mode-note');note.append(el('i'),el('span','',t.hands));d.append(note);root.append(d)}
+if(view==='reset'){const d=dialog(t.resetTitle,t.resetBody),a=el('div','actions');a.append(button(t.cancel,()=>transition('cancel'),true),button(t.confirmReset,()=>transition('confirm')));d.append(a);root.append(d)}
+if(view==='exit'){const d=dialog(t.exitTitle,''),a=el('div','actions');a.append(button(t.back,()=>{params.delete('state');transition('restart')}));d.append(a);root.append(d)}
+if(notice)root.append(el('div','toast',notice));}
+// Review harness only: no buttons pretending to implement physical MR events.
+window.designReview={getState:()=>({state,selected,counts,consented}),event:transition,setCustomModels:models=>{customModels=models;for(const it of models)customCounts[it.id]??=0;render()},setState:id=>{if(spec.states.some(x=>x.id===id)){state=id;render()}},recordShatter:(id,objectInstanceId)=>{window.designReview.shattered??=new Set();if(!consented||state!=='experience'||window.designReview.shattered.has(objectInstanceId))return;window.designReview.shattered.add(objectInstanceId);if(!revealOrder.includes(id))revealOrder.push(id);if(id in counts)counts[id]++;else customCounts[id]=(customCounts[id]||0)+1;render()},status:key=>notify(key),hotResume:()=>{state=consented?'experience':'safety-gate';render()},coldRestart:()=>{consented=false;state='cold-logo';render()}};render();
+</script></body></html>

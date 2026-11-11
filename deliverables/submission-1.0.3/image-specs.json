@@ -1,0 +1,34 @@
+[
+  {
+    "file": "01-icon-1024.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "bytes": 118971
+  },
+  {
+    "file": "02-poster-2560x1440.png",
+    "size": [
+      2560,
+      1440
+    ],
+    "bytes": 235414
+  },
+  {
+    "file": "03-screenshot-grab.png",
+    "size": [
+      2560,
+      1440
+    ],
+    "bytes": 2105242
+  },
+  {
+    "file": "04-screenshot-fragments.png",
+    "size": [
+      2560,
+      1440
+    ],
+    "bytes": 2117364
+  }
+]

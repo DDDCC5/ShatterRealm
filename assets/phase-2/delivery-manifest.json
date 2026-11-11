@@ -1,0 +1,16 @@
+{
+  "stage": 2,
+  "status": "awaiting_user_approval",
+  "approvedPhase1Revision": 4,
+  "objects": 15,
+  "closedFragments": 431,
+  "collisionHulls": 2206,
+  "independentAudioSamples": 43,
+  "uiEntries": 31,
+  "modelProduction": "original local parametric modeling and volumetric cutting after managed Editor failure",
+  "audioProduction": "12 edited CC0 real-world glass/ceramic recordings; 31 original procedural files unchanged",
+  "runtimePicoValidation": "not_performed",
+  "apk": "not_created; requires phase-2 approval first",
+  "audioRevision": 2,
+  "userAcceptedAudio": "all throw sounds; revised collision and fragment-land sounds pending confirmation"
+}

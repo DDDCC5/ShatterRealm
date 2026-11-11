@@ -1,0 +1,75 @@
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log/OS Files
+*.log
+.DS_Store
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+output.json
+
+# IntelliJ
+*.iml
+.idea/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Android Profiling
+*.hprof
+
+# Agent/host state and local reports
+.agents/
+.codex/
+.pico/
+.pico-env.json
+.scratch/
+.kotlin/
+PICO-*-AGENTIC-TOOLS.AGENTS.md
+AGENTS.md
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+# Runtime evidence may contain room imagery or device identifiers.
+docs/environment/
+docs/implementation/
+docs/superpowers/
+deliverables/*
+# Public submission exports are deliberately selected below.
+!deliverables/submission-1.0.3/
+!deliverables/submission-1.0.3/**
+assets/phase-2/review/
+assets/phase-2/production-sources/
+assets/phase-2/vendor/
+assets/phase-2/audio/revisions/
+editor-asset/
+# Upstream example/test datasets are not needed by the configured native build.
+app/src/main/cpp/vendor/assimp-6.0.2/test/
+app/src/main/cpp/vendor/manifold-3.5.4/test/
+app/src/main/cpp/vendor/manifold-3.5.4/samples/
+# Local form fields include post-publication commit identifiers.
+deliverables/submission-1.0.3/*.md
+deliverables/submission-1.0.3/*.txt
+deliverables/submission-1.0.3/填写字段.json
+# Host-only orchestration helpers
+tools/assets/editor_bridge.mjs
+tools/assets/editor_call.py
+tools/runtime/read_api.py
+tools/runtime/restart_codegen.py
+tools/runtime/advance_codegen.py

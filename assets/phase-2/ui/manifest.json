@@ -1,0 +1,207 @@
+{
+  "status": "phase-2 export candidates",
+  "approvedDesignRevision": 4,
+  "textPolicy": "only one language per screen; runtime text kept separate",
+  "files": [
+    {
+      "id": "safety-panel",
+      "svg": "safety-panel.svg",
+      "png": "safety-panel.png",
+      "purpose": "reusable UI geometry, text separate"
+    },
+    {
+      "id": "controller-panel",
+      "svg": "controller-panel.svg",
+      "png": "controller-panel.png",
+      "purpose": "reusable UI geometry, text separate"
+    },
+    {
+      "id": "counter-panel-compact",
+      "svg": "counter-panel-compact.svg",
+      "png": "counter-panel-compact.png",
+      "purpose": "reusable UI geometry, text separate"
+    },
+    {
+      "id": "counter-panel-expanded",
+      "svg": "counter-panel-expanded.svg",
+      "png": "counter-panel-expanded.png",
+      "purpose": "reusable UI geometry, text separate"
+    },
+    {
+      "id": "item-panel",
+      "svg": "item-panel.svg",
+      "png": "item-panel.png",
+      "purpose": "reusable UI geometry, text separate"
+    },
+    {
+      "id": "reset-panel",
+      "svg": "reset-panel.svg",
+      "png": "reset-panel.png",
+      "purpose": "reusable UI geometry, text separate"
+    },
+    {
+      "id": "button-primary",
+      "svg": "button-primary.svg",
+      "png": "button-primary.png",
+      "purpose": "reusable UI geometry, text separate"
+    },
+    {
+      "id": "button-pressed",
+      "svg": "button-pressed.svg",
+      "png": "button-pressed.png",
+      "purpose": "reusable UI geometry, text separate"
+    },
+    {
+      "id": "button-secondary",
+      "svg": "button-secondary.svg",
+      "png": "button-secondary.png",
+      "purpose": "reusable UI geometry, text separate"
+    },
+    {
+      "id": "button-disabled",
+      "svg": "button-disabled.svg",
+      "png": "button-disabled.png",
+      "purpose": "reusable UI geometry, text separate"
+    },
+    {
+      "id": "refresh",
+      "svg": "refresh.svg",
+      "png": "refresh.png",
+      "purpose": "custom vector icon"
+    },
+    {
+      "id": "reset",
+      "svg": "reset.svg",
+      "png": "reset.png",
+      "purpose": "custom vector icon"
+    },
+    {
+      "id": "mark",
+      "svg": "mark.svg",
+      "png": "mark.png",
+      "purpose": "custom vector icon"
+    },
+    {
+      "id": "launcher-master",
+      "svg": "launcher-master.svg",
+      "png": "launcher-master.png",
+      "purpose": "launcher source layer"
+    },
+    {
+      "id": "launcher-foreground",
+      "svg": "launcher-foreground.svg",
+      "png": "launcher-foreground.png",
+      "purpose": "launcher source layer"
+    },
+    {
+      "id": "launcher-background",
+      "svg": "launcher-background.svg",
+      "png": "launcher-background.png",
+      "purpose": "launcher source layer"
+    },
+    {
+      "id": "launcher-monochrome",
+      "svg": "launcher-monochrome.svg",
+      "png": "launcher-monochrome.png",
+      "purpose": "launcher source layer"
+    },
+    {
+      "id": "safety-zh",
+      "png": "safety-zh@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "zh",
+      "conceptThumbnails": false
+    },
+    {
+      "id": "controller-zh",
+      "png": "controller-zh@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "zh",
+      "conceptThumbnails": false
+    },
+    {
+      "id": "reset-zh",
+      "png": "reset-zh@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "zh",
+      "conceptThumbnails": false
+    },
+    {
+      "id": "counter-zero-zh",
+      "png": "counter-zero-zh@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "zh",
+      "conceptThumbnails": false
+    },
+    {
+      "id": "counter-active-zh",
+      "png": "counter-active-zh@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "zh",
+      "conceptThumbnails": false
+    },
+    {
+      "id": "object-panel-zh",
+      "png": "object-panel-zh@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "zh",
+      "conceptThumbnails": false
+    },
+    {
+      "id": "logo-zh",
+      "png": "logo-zh@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "zh",
+      "conceptThumbnails": false
+    },
+    {
+      "id": "safety-en",
+      "png": "safety-en@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "en",
+      "conceptThumbnails": false
+    },
+    {
+      "id": "controller-en",
+      "png": "controller-en@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "en",
+      "conceptThumbnails": false
+    },
+    {
+      "id": "reset-en",
+      "png": "reset-en@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "en",
+      "conceptThumbnails": false
+    },
+    {
+      "id": "counter-zero-en",
+      "png": "counter-zero-en@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "en",
+      "conceptThumbnails": false
+    },
+    {
+      "id": "counter-active-en",
+      "png": "counter-active-en@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "en",
+      "conceptThumbnails": false
+    },
+    {
+      "id": "object-panel-en",
+      "png": "object-panel-en@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "en",
+      "conceptThumbnails": false
+    },
+    {
+      "id": "logo-en",
+      "png": "logo-en@2x.png",
+      "purpose": "localized flattened visual reference; runtime must use separate dynamic text",
+      "language": "en",
+      "conceptThumbnails": false
+    }
+  ]
+}
