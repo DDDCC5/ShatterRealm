@@ -1,0 +1,35 @@
+{
+  "version": "1.0.10",
+  "versionCode": 11,
+  "package": "com.example.shatterrealm",
+  "apk": "shatter-realm-1.0.10-debug.apk",
+  "sha256": "5a3a107fc2aa19e511c654997d74e84276854f4b2e06621f90f0f4c594f29773",
+  "sdk": "6.1.9",
+  "verification": {
+    "build": "passed",
+    "unitTests": {
+      "passed": 32,
+      "failed": 0
+    },
+    "headset": {
+      "input": "synthetic dual tracked hands in native SDK runtime",
+      "frontSpawnAndLeftGrab": "passed",
+      "heldVisualMotion": "passed",
+      "heldPhysicsDisabled": "passed",
+      "keyboard77ShardsRetained": "passed",
+      "sleepRestoreAndReset": "passed"
+    },
+    "emulator": {
+      "input": "synthetic dual tracked hands in PICO Emulator 6.1",
+      "frontSpawnAndRightGrab": "passed",
+      "glassCup24ShardsRetained": "passed",
+      "sleepRestoreAndReset": "passed"
+    }
+  },
+  "limitations": [
+    "Occasional long frame intervals remain. No zero-jank, fixed-FPS or percentage-improvement claim.",
+    "Synthetic tracking tests do not replace manual real-hand comfort acceptance.",
+    "Requires valid system room planes; debris support extrapolates measured floor only.",
+    "Earlier 15-model/431-shard and 99-concurrent-shard results belong to 1.0.8, not full 1.0.10 headset acceptance."
+  ]
+}

@@ -16,48 +16,55 @@ import com.pico.spatial.core.math.Vector3
 import com.pico.spatial.core.math.Quat
 import com.pico.spatial.ui.foundation.content.SpatialView
 import com.pico.spatial.core.container.SpatialViewContent
-import com.pico.spatial.core.ecs.event.SceneEvents
-import com.pico.spatial.core.lifecycle.Cancellable
 import com.example.shatterrealm.domain.model.Q4
 import com.example.shatterrealm.domain.usecase.UprightHeading
+import android.os.SystemClock
 import kotlinx.coroutines.*
 import android.util.Log
 
 private class InterfaceAnchors {
     private val root=Entity()
-    private val frame=Entity().apply { setName("LevelInterfaceFrame");enabled=false }
-    private val camera=Entity().apply {
-        setName("InitialInterfaceCameraProbe")
-        components.set(AnchorComponent(trackingMode=AnchorComponent.TrackingMode.CONTINUOUS))
+    private val frame=Entity().apply {
+        setName("LevelInterfaceFrame")
+        components.set(AnchorComponent(trackingMode=AnchorComponent.TrackingMode.ONCE))
     }
     private val anchors=mutableMapOf<String,Entity>()
     private val scope=CoroutineScope(SupervisorJob()+Dispatchers.Main.immediate)
-    private var updates:Cancellable?=null
+    private val hmd=com.pico.spatial.tracking.hmd.HMDTrackingProvider()
     private var ready=false
     private var focused=false
+    private var started=0L
+    private var latestPose:com.pico.spatial.tracking.hmd.HMDPose?=null
+    private var poseReceived=0L
+    private var poseJob:Job?=null
     fun focus(value:Boolean) { focused=value }
-    init { root.addChild(frame);root.addChild(camera) }
+    init { root.addChild(frame) }
     fun attach(content:SpatialViewContent) {
-        content.addEntity(root)
-        var frames=0
-        updates=content.subscribe(SceneEvents.Update::class.java) {
-            scope.launch {
-                if(ready) return@launch
-                if(!focused) { frames=0;return@launch }
-                if(++frames<3) return@launch
-                val position=camera.convertPositionTo(Vector3.ZERO,null)
-                if(position==Vector3.ZERO) return@launch // Wait for the initial camera target, not default Entity pose.
-                val rotation=camera.convertRotationTo(Quat(),null)
-                val yaw=UprightHeading.yaw(Q4(rotation.x.toDouble(),rotation.y.toDouble(),rotation.z.toDouble(),rotation.w.toDouble()))
-                val level=Quat(Vector3(0f,1f,0f),yaw.toFloat())
-                frame.pose().position=root.convertPositionFrom(position,null)
-                frame.pose().quaternion=root.convertRotationFrom(level,null)
-                ready=true;frame.enabled=true
-                updates?.cancel();updates=null;camera.destroy()
-                Log.i("ShatterRealm","Level interface captured: position=$position yaw=$yaw; head pitch/roll discarded")
-                anchors.forEach { (id,entity) -> logUpright(id,entity) }
+        content.addEntity(root);started=SystemClock.elapsedRealtime()
+        poseJob=scope.launch(start=CoroutineStart.UNDISPATCHED) {
+            hmd.dataFlow.collect { data ->
+                latestPose=data.hmdPose;poseReceived=SystemClock.elapsedRealtime()
+                if(!ready && focused && poseReceived-started>=1400) capture(data.hmdPose)
             }
         }
+        hmd.start()
+        scope.launch {
+            delay(1400)
+            latestPose?.takeIf { focused && SystemClock.elapsedRealtime()-poseReceived<200 }?.let { if(!ready) capture(it) }
+        }
+        Log.i("ShatterRealm","Interface visible; waiting for actual HMD tracking pose, not anchor transform cache")
+    }
+    private fun capture(pose:com.pico.spatial.tracking.hmd.HMDPose) {
+        if(ready) return
+        val rotation=pose.rotation
+        val yaw=UprightHeading.yaw(Q4(rotation.x.toDouble(),rotation.y.toDouble(),rotation.z.toDouble(),rotation.w.toDouble()))
+        val level=Quat(Vector3(0f,1f,0f),yaw.toFloat())
+        frame.components.remove(AnchorComponent::class.java)
+        frame.pose().position=root.convertPositionFrom(pose.position,null)
+        frame.pose().quaternion=root.convertRotationFrom(level,null)
+        ready=true;hmd.stop();poseJob?.cancel()
+        Log.i("ShatterRealm","Interface actual HMD captured position=${pose.position} rotation=$rotation yaw=$yaw")
+        anchors.forEach { (id,entity) -> logUpright(id,entity) }
     }
     fun add(id:String,panel:Entity,position:Vector3,rotation:Quat=Quat()) {
         if(id in anchors) return
@@ -70,12 +77,10 @@ private class InterfaceAnchors {
     }
     private fun logUpright(id:String,entity:Entity) {
         val q=entity.convertRotationTo(Quat(),null)
-        val up=q.rotateVector(Vector3(0f,1f,0f))
-        val right=q.rotateVector(Vector3(1f,0f,0f))
-        Log.i("ShatterRealm","Interface upright $id up=$up rightY=${right.y}")
+        Log.i("ShatterRealm","Interface upright $id up=${q.rotateVector(Vector3(0f,1f,0f))} rightY=${q.rotateVector(Vector3(1f,0f,0f)).y}")
     }
     fun visible(id:String,value:Boolean) { anchors[id]?.enabled=value }
-    fun close() { scope.cancel();updates?.cancel();root.destroy() }
+    fun close() { hmd.stop();scope.cancel();root.destroy() }
 }
 @Composable fun ExperienceScreen() {
     val context=LocalContext.current

@@ -28,4 +28,4 @@ data class Motion(val linear: V3, val angular: V3) {
 
 /** Process-only restore point. Fragment index -1 denotes an intact object. Global meter/radian coordinates. */
 data class BodySnapshot(val item:Item,val instance:Long,val fragmentIndex:Int,val position:V3,
-    val rotation:Q4,val linear:V3,val angular:V3,val released:Boolean)
+    val rotation:Q4,val linear:V3,val angular:V3,val released:Boolean,val sleeping:Boolean=false)

@@ -19,15 +19,21 @@ import java.net.URI
 internal fun JSONArray.vector() = Vector3(getDouble(0).toFloat(),getDouble(1).toFloat(),getDouble(2).toFloat())
 internal fun JSONArray.quaternion() = Quat(getDouble(0).toFloat(),getDouble(1).toFloat(),getDouble(2).toFloat(),getDouble(3).toFloat())
 internal fun Entity.pose() = requireNotNull(components.get<TransformComponent>())
-internal data class FragmentTemplate(val visual: Entity,val offset: Vector3,val mass: MassProperties,val shapes: List<ShapeResource>)
+internal data class FragmentTemplate(val visual: Entity,val offset: Vector3,val mass: MassProperties,val shapes: List<ShapeResource>,val supportPoints:List<Vector3>) {
+    val supportRadius=kotlin.math.sqrt(supportPoints.maxOf { it.x*it.x+it.y*it.y+it.z*it.z })
+}
 internal data class PreparedItem(val item: Item,val intact: Entity,val fragmentsRoot: Entity,
-    val fragments: List<FragmentTemplate>,val shapes: List<ShapeResource>,val mass: MassProperties,val physicsMaterial: PhysicsMaterialResource)
+    val fragments: List<FragmentTemplate>,val shapes: List<ShapeResource>,val mass: MassProperties,val physicsMaterial: PhysicsMaterialResource) {
+    private val pickupPoints=fragments.flatMap { piece -> piece.supportPoints.map { it+piece.offset } }
+    val pickupMin=Vector3(pickupPoints.minOf { it.x },pickupPoints.minOf { it.y },pickupPoints.minOf { it.z })
+    val pickupMax=Vector3(pickupPoints.maxOf { it.x },pickupPoints.maxOf { it.y },pickupPoints.maxOf { it.z })
+}
 
 internal class PhysicsAssetStore(private val context:Context) {
     private val cache=mutableMapOf<String,PreparedItem>()
     private val resources=mutableSetOf<Resource>()
     private val loadLock=Mutex()
-    private data class CookedPiece(val id:String,val offset:Vector3,val mass:MassProperties,val shapes:List<ShapeResource>)
+    private data class CookedPiece(val id:String,val offset:Vector3,val mass:MassProperties,val shapes:List<ShapeResource>,val supportPoints:List<Vector3>)
     private data class Cooked(val pieces:List<CookedPiece>,val compound:List<ShapeResource>,val mass:MassProperties,
         val material:PhysicsMaterialResource,val resources:List<Resource>)
     suspend fun get(item: Item): PreparedItem = loadLock.withLock { load(item) }
@@ -59,7 +65,7 @@ internal class PhysicsAssetStore(private val context:Context) {
             val (intact,fragments)=result
             val geometry=requireNotNull(cooked.get())
             val pieces=geometry.pieces.map { record ->
-                FragmentTemplate(requireNotNull(fragments.findEntity(record.id)) { "Missing ${record.id}" },record.offset,record.mass,record.shapes)
+                FragmentTemplate(requireNotNull(fragments.findEntity(record.id)) { "Missing ${record.id}" },record.offset,record.mass,record.shapes,record.supportPoints)
             }
             val prepared=PreparedItem(item,intact,fragments,pieces,geometry.compound,geometry.mass,geometry.material)
             resources.addAll(geometry.resources)
@@ -80,19 +86,23 @@ internal class PhysicsAssetStore(private val context:Context) {
             val pieces=(0 until records.length()).map { i ->
                 currentCoroutineContext().ensureActive()
                 val record=records.getJSONObject(i);val id=record.getString("id")
-                val shapes=hullData.filter { it.getString("name").startsWith("$id-hull-") }.map { hull ->
+                val hulls=hullData.filter { it.getString("name").startsWith("$id-hull-") }
+                val points=mutableListOf<Vector3>();val triangles=mutableListOf<Int>()
+                hulls.forEach { hull ->
                     currentCoroutineContext().ensureActive()
-                    val points=hull.getJSONArray("positions");val triangles=hull.getJSONArray("indices")
-                    val model=MeshModel((0 until points.length()).map { points.getJSONArray(it).vector() },
-                        (0 until triangles.length()).map { triangles.getInt(it) })
-                    val mesh=own(MeshResource.createWithMeshModel(model=model,name=item.id+"-"+hull.getString("name")))
-                    own(ShapeResource.createConvexMesh(mesh))
+                    val p=hull.getJSONArray("positions");val t=hull.getJSONArray("indices");val offset=points.size
+                    repeat(p.length()) { points+=p.getJSONArray(it).vector() }
+                    repeat(t.length()) { triangles+=offset+t.getInt(it) }
                 }
-                require(shapes.isNotEmpty()) { "Missing hulls $id" }
+                require(points.isNotEmpty()) { "Missing hulls $id" }
+                // One convex envelope per shard instead of a compound of many overlapping hulls.
+                // The approved render mesh and measured mass/inertia remain unchanged.
+                val mesh=own(MeshResource.createWithMeshModel(MeshModel(points,triangles),name="${item.id}-$id-collision"))
+                val shapes=listOf(own(ShapeResource.createConvexMesh(mesh)))
                 val principal=record.optJSONArray("principalInertia")
                 val mass=if(principal!=null) MassProperties(record.getDouble("massKg").toFloat(),principal.vector(),Vector3(0f),record.getJSONArray("principalRotation").quaternion())
                     else MassProperties.generateByShapesAndMass(shapes,record.getDouble("massKg").toFloat())
-                CookedPiece(id,record.getJSONArray("positionM").vector(),mass,shapes)
+                CookedPiece(id,record.getJSONArray("positionM").vector(),mass,shapes,points.distinct())
             }
             val compound=pieces.flatMap { piece -> piece.shapes.map { own(it.offsetByTranslation(piece.offset)) } }
             val mass=MassProperties.generateByShapesAndMass(compound,metadata.getDouble("massKg").toFloat())
